@@ -1,0 +1,19 @@
+// Settings
+@import "_config/var";
+
+// Fonts
+@import "_config/fonts";
+
+body{
+    padding: 0;
+    margin: 0;
+    @include regular;
+}
+
+// Libs
+@import "libs/*.scss";
+
+// Style
+@import "style/*.scss";
+
+
