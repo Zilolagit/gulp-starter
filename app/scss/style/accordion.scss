@@ -1,0 +1,62 @@
+.accordion{
+    &-item{
+        border: none;
+        border-bottom: 2px solid #3289BE;
+    }
+    &-button{
+        background-color: #48A6E3;
+        color: #ffff;
+        font-weight: bold;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        &::after{
+            display: none;
+        }
+        &:focus{
+                box-shadow: none;
+        }
+        &-second{
+            &::after{
+                display: block;
+                background-image: none;
+                font-family: "bootstrap-icons";
+                color: #fff;
+                transform: none;
+            }
+            &:not(.collapsed){
+                background-color:#48A6E3;
+                color: #fff;
+                &::after{
+                    background-image: none;
+                    content: "\F282";
+                    transform: none;
+                    font-size: 20px;
+                    transform: translateY(-2px);
+                }
+            }
+            &.collapsed{
+                &::after{
+                    transform: none;
+                    content: "\F282";
+                    font-size: 20px;
+                    transition: all .3s ease-in-out;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+    #collapseTwo{
+        *{
+            background-color: #4a515b;
+        }
+        .accordion-item{
+            border: none;
+            border-bottom: 1px solid #323943;
+        }
+        .accordion-button{
+            border-radius: 0px;
+            &:focus{
+                border: none;
+            }
+        }
+    }
+}

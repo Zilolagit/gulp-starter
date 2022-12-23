@@ -2,17 +2,52 @@ extends layout/app
 block var 
     - let page_title = "Home"; 
 block content 
-    .start 
-        .start__container 
-            .start__author 
-                h1 Furkat Vokhidov 
-            .start__title 
-                h2= site_name 
-            .start__social 
-                a(href="https://t.me/vofurkat")
-                    i.fa-brands.fa-telegram
-                a(href="https://facebook.com/vofurkat")
-                    i.fa-brands.fa-facebook 
-                a(href="https://github.com/vofurkat")
-                    i.fa-brands.fa-github 
-    
+    //- Accordian
+    main.main
+        .container
+            .row
+                .col-md-4.offset-4
+                    #accordionExample.accordion
+                        .accordion-item
+                            h2#headingThree.accordion-header
+                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour')
+                                | Home Page
+                        .accordion-item
+                            h2#headingTwo.accordion-header
+                            button.accordion-button.accordion-button-second.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                                | Categories
+                            #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordionExample')
+                                .accordion-item
+                                    h2#headingFive.accordion-header
+                                    button.accordion-button.accordion-button-second.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFive' aria-expanded='false' aria-controls='collapseFive')
+                                        | Mobile Phone
+                                #collapseFive.accordion-collapse.collapse(aria-labelledby='headingFive' data-bs-parent='#collapseTwo')
+                                    .accordion-item
+                                        h2#headingEight.accordion-header
+                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseEight' aria-expanded='false' aria-controls='collapseFour')
+                                            | Samsung
+                                    .accordion-item
+                                        h2#headingNine.accordion-header
+                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseNine' aria-expanded='false' aria-controls='collapseFour')
+                                            | Iphone 13 Pro Max
+                                .accordion-item
+                                    h2#headingSix.accordion-header
+                                    button.accordion-button.accordion-button-second.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSix' aria-expanded='false' aria-controls='collapseFive')
+                                        | Laptops
+                                #collapseSix.accordion-collapse.collapse(aria-labelledby='headingSix' data-bs-parent='#collapseTwo')
+                                    .accordion-item
+                                        h2#headingTen.accordion-header
+                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTen' aria-expanded='false' aria-controls='collapseFour')
+                                            | Samsung Planshet 
+                                    .accordion-item
+                                        h2#headingTen.accordion-header
+                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTen' aria-expanded='false' aria-controls='collapseFour')
+                                            | Iphone Planshet
+                        .accordion-item
+                            h2#headingThree.accordion-header
+                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+                                | Shopping
+                        .accordion-item
+                            h2#headingFour.accordion-header
+                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour')
+                                | Contacts

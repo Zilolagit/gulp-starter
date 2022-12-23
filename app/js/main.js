@@ -3,3 +3,4 @@
 // import AOS from 'aos';
 // $(".slider").slick();
 // AOS.init();
+import "bootstrap";``
